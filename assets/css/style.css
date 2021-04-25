@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+	padding: 0;
+	color: #fff;
+}
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
+body {
+	background: #43474e;
+	color: #fff;
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 140%;
+	margin: 0;
+	min-height: 100vh;
+	padding: 0;
+	width: 100%;
+}
+
+h1.page_title {color:#fff;}
+h4.what_to_do{color:#fff;}
+h2.menu_title{color:#fff;}
+
+.page_title, .what_to_do {
+	font-weight: 300;
+	line-height: 120%;
+	text-align: center;
+	text-shadow: 0 1px 5px rgba(0,0,0,.8);
+	text-transform: uppercase;
+}
+
+/* PEN STYLES ========== */
+a, .side_menu {
+	-webkit-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+	max-height: 100wh;
+}
+::-webkit-scrollbar{
+	width: 0 !important;
+}
+/* MENU CONTAINER ----- */
+.side_menu {
+	background: rgba(0,20,60,.9);
+	height: 100vh;
+	left: -250px;
+	position: absolute;
+	top: 0;
+    width: 250px;
+    z-index: 1000;
+}
+.side_menu .container {
+	padding: 0 0.5em;
+}
+
+/* HAMBURGER STYLES ----- */
+.burger_box {
+	display: block;
+	float: right;
+	margin-right: -45px;
+}
+.burger_box a.menu-icon {
+	display: inline-block;
+	float: none;
+	height: 43px;
+	padding: 10px;
+	opacity: .5;
+	width: 45px;
+	z-index: 100;
+}
+.burger_box a.menu-icon:hover,
+.burger_box a.menu-icon.opened {
+	opacity: 1;
+}
+.burger_box a.menu-icon.opened {
+	background: rgba(0,20,60,.9);
+}
+.burger_box .menu-icon_box {
+	display: inline-block;
+	height: 25px;
+	position: relative;
+	text-align: left;
+	width: 25px;
+}
+.burger_box .menu-icon_line {
+	background: #fff;
+	border-radius: 2px;
+	display: inline-block;
+	height: 3px;
+	position: absolute;
+	width: 100%;
+}
+.burger_box .menu-icon_line--1 {
+	top: 2px;
+}
+.burger_box .menu-icon_line--2 {
+	top: 10px;
+}
+.burger_box .menu-icon_line--3 {
+	top: 18px;
+}
+.burger_box .menu-icon_line--1 {
+	transition: top 200ms 250ms, transform 200ms;
+	-webkit-transition: top 200ms 250ms, -webkit-transform 200ms;
+}
+.burger_box .menu-icon_line--2 {
+	transition: opacity 0ms 300ms;
+	-webkit-transition: opacity 0ms 300ms;
+}
+.burger_box .menu-icon_line--3 {
+	transition: top 100ms 300ms, transform 200ms;
+	-webkit-transition: top 100ms 300ms, -webkit-transform 200ms;
+}
+.burger_box .menu-icon.opened .menu-icon_box {
+	transform: scale3d(0.9, 0.9, 0.9);
+	-webkit-transform: scale3d(0.9, 0.9, 0.9);
+}
+.burger_box .menu-icon.opened .menu-icon_line {
+	top: 10px;
+}
+.burger_box .menu-icon.opened .menu-icon_line--1 {
+	transform: rotate3d(0, 0, 1, 45deg);
+	-webkit-transform: rotate3d(0, 0, 1, 45deg);
+	transition: top 100ms, transform 200ms 250ms;
+	-webkit-transition: top 100ms, -webkit-transform 200ms 250ms;
+}
+.burger_box .menu-icon.opened .menu-icon_line--2 {
+	opacity: 0;
+	transition: opacity 200ms;
+	-webkit-transition: opacity 200ms;
+}
+.burger_box .menu-icon.opened .menu-icon_line--3 {
+	transform: rotate3d(0, 0, 1, -45deg);
+	-webkit-transform: rotate3d(0, 0, 1, -45deg);
+	transition: top 200ms, transform 200ms 250ms;
+	-webkit-transition: top 200ms, -webkit-transform 200ms 250ms;
+}
+.top {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    padding: 5px;
+    overflow: hidden;
+    z-index: 0;
+}
+.content {
+    position: absolute;
+    top: 12%;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+    z-index: 0;
+}
+/* begin Scroll Down Button */
+button.scroll_down {
+    margin: 5px;
+    height: 30px;
+    width: 30px;
+    bottom: 0px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+  }
+  button.scroll_down:after {
+    content: "";
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0px;
+    top: 15px;
+    border: 10px solid transparent; 
+    border-top: 10px solid white; 
+  }  
+  
+  
+  /* end Scroll Up Button */
+
+button.scroll_up {
+    margin: 5px;
+    height: 30px;
+    width: 30px;
+    bottom: 0px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+  }
+  button.scroll_up:after {
+    content: "";
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0px;
+    top: -15px;
+    border: 10px solid transparent; 
+    border-bottom: 10px solid white; 
+  }  
+iframe {
+    width: 100%;
+    height: 89%;
+	position: absolute;
+	border: none;
+	display: flex;
+	align-items: center;
+	margin: 0;
+}
+.page {
+	width: 75%;
+	margin: auto;
+}
+.page h1, h2 {
+	margin-bottom: 30px;
+	margin-top: 30px;
+	text-align: center;
+}
+.page h2 {
+	font-size: 2em;
+}
+.page p {
+	margin-bottom: 15px;
+	font-size: 150%;
+	text-indent: 35px;
+}
+.page li {
+	font-size: 150%;
+	margin-bottom: 15px;
+	text-indent: 35px;
+}
+.page-links {
+	display: flex;
+	justify-content: space-between;
+	width: 75%;
+	margin: auto;
+	margin-top: 25px;
+}
+.content {
+	margin: 0;
+	padding: 0;
+}
+.moving {
+	width: 70%;
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+	margin-top: 30px;
+}
+.right {
+	width: 35px;
+	height: 35px;
+}
+.left {
+	width: 35px;
+	height: 35px;
+	transform: rotate(180deg);
+}
+.px-0 ul, li, a{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style-type: none;
+	color: #fff;
+	font-size: 1.03em;
+}
+.px-0 li {
+	border-bottom: solid 1px;
+	border-color: #fff;
+	margin-top: 15px;
+}
+.acc-bg{
+	background-color: rgba(0, 12, 32, 0.9);
+	
+}
+
+/* img */
+.litle {width: 100px;}
+.medium {width: 150px;}
+.big {width: 200px;}
+
+.img {
+	padding: 0;
+	margin: 0;
+	width: 150px;
+}
+.img-name {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: auto;
+	padding: 0;
+	margin: 0;
+}
+.name {
+	font-size: 1rem;
+	margin-top: 5px;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+.img-title {
+	margin: 0;
+	padding: 0;
+	color: black;
+	font-size: 1.1rem;
+	text-align: center;
+	padding: 5px;
+}
+.text-img {
+	display: flex;
+
+}
+.text-img p {
+	margin-left: 50px;
+}
+
+.theme-button {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+	font-size: 1.2em;
+	border: none;
+	background-color: rgba(0, 9, 26, 0.9);
+    color: white;
+}
+
+@media (max-width: 400px) {
+	.text-img p {
+		margin-left: 0px;
+		
+	}
+	.text-img {
+		display: flex;
+		flex-direction: column;
+	}
+	.container p{
+		
+		font-size: 5vw;
+	}
+	.page {
+		width: 90%;
+	}
+}
